@@ -42,7 +42,7 @@ def find_best_k(dataset, k_values):
 
     for k in k_values:
         accuracy = evaluate_knn(dataset, k)
-        print(f"Accuracy of KNN with k={k}: {accuracy * 100:.2f}%")
+        # print(f"Accuracy of KNN with k={k}: {accuracy * 100:.2f}%")
 
         if accuracy > best_accuracy:
             best_accuracy = accuracy
@@ -65,7 +65,7 @@ def dt(dataset):
     y_pred = pipeline.predict(dataset["X_test"])
 
     accuracy = accuracy_score(dataset["y_test"], y_pred)
-    print(f"Accuracy of MLP: {accuracy * 100:.2f}%")
+    print(f"Accuracy of dt: {accuracy * 100:.2f}%")
 
     return accuracy
 
