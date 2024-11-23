@@ -25,13 +25,11 @@ def data_load():
             print(f" {name} doesn't exist")
             continue
 
-        # 读取数据
         X_train = pd.read_csv(X_train_path)
         X_test = pd.read_csv(X_test_path)
         y_train = pd.read_csv(y_train_path)
         y_test = pd.read_csv(y_test_path)
 
-        # 保存数据到字典中
         datasets[name] = {
             "X_train": X_train,
             "X_test": X_test,
